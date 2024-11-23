@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 //this was created later to pass data through props
 // function Square()
 // {
@@ -8,12 +8,16 @@
 // }
 //updated sqaure that takes a value form the parent to display inside the sqare
 //it means Sqaure component can be passed a prop called value
-function Square({value})
+// function Square({value})
+function Square()//removed value prop from Square
 {
+    //new line that calls useState
+    const [value, setValue]=useState(null);
     //3.4 to make interative component
 function handleClick()
 {
-    console.log('clicked!');
+    // console.log('clicked!');
+    setValue('X');
 }
 
     //but this gives all 9 same value i.e. 1 , to fix this we'll use props to pass the value each square must have
@@ -72,9 +76,12 @@ export default function Board() {
         {/* <Square/>
         <Square/>
         <Square/> */}
-        <Square value="1"/>
+        {/* <Square value="1"/>
         <Square value="2"/>
-        <Square value="3"/>
+        <Square value="3"/> */}
+        <Square/>
+        <Square/>
+        <Square/>
         
     </div>
     <div className="board-row">
@@ -84,9 +91,12 @@ export default function Board() {
          {/* <Square/>
         <Square/>
         <Square/> */}
-         <Square value="4"/>
+         {/* <Square value="4"/>
         <Square value="5"/>
-        <Square value="6"/>
+        <Square value="6"/> */}
+        <Square/>
+        <Square/>
+        <Square/>
     </div>
     <div className="board-row">
         {/* <button className="square">7</button>
@@ -95,9 +105,12 @@ export default function Board() {
          {/* <Square/>
         <Square/>
         <Square/> */}
-         <Square value="7"/>
+         {/* <Square value="7"/>
         <Square value="8"/>
-        <Square value="9"/>
+        <Square value="9"/> */}
+        <Square/>
+        <Square/>
+        <Square/>
         
     </div>
     </>

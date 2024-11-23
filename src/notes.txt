@@ -1,0 +1,3 @@
+--we want the box to remember that it was clicked, and fill it with X.
+To remember things , coponents use state.
+--useState special fucntion, whom we can tell from our component to remember things
